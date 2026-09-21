@@ -15,7 +15,7 @@ access_token = os.environ.get("X_ACCESS_TOKEN")
 access_token_secret = os.environ.get("X_ACCESS_TOKEN_SECRET")
 
 # 健康・長寿・予防医学に関するGoogleニュースRSS
-GOOGLE_ALERT_RSS_URL = "https://news.google.com/rss/search?q=健康寿命+OR+老化研究+OR+抗老化+OR+予防医学+OR+オートファジー+OR+NMN+OR+認知症予防+OR+長寿科学+OR+アンチエイジング+OR+ハーバード大学+研究+OR+健康長寿&hl=ja&gl=JP&ceid=JP:ja"
+GOOGLE_ALERT_RSS_URL = "https://news.google.com/rss/search?q=健康寿命+OR+老化研究+OR+抗老化+OR+予防医学+OR+オートファジー+OR+NMN+OR+認知症予防+OR+長寿科学+OR+アンチエイジング+OR+ハーバード大学+研究+OR+健康長寿+OR+不老不死+OR+若返り&hl=ja&gl=JP&ceid=JP:ja"
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 ai_client = genai.Client(api_key=GEMINI_API_KEY)
@@ -71,7 +71,7 @@ prompt = f"""
 
 【厳格な制約条件】
 - 必ず「50文字〜70文字以内」で完結させてください。
-- 「最新研究の要点」や「日常生活や健康寿命へのヒント」がサクッと伝わる、落ち着いた知的なトーン（〜です、〜とされています等）にしてください。
+- 「最新研究の要点」や「日常生活や健康寿命へのヒント」がサクッと伝わる、落ち着いた知的なトーン（〜です、〜とされています等）にしてください。最後に私の感想を（自分へのメッセージ的なトーン（～しよう、～はやめよう等）で入れてください。
 - 煽り文句、ハッシュタグ、絵文字、URLは含めないでください。
 
 【ニュース内容】
